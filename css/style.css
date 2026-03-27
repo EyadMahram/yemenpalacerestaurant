@@ -7,33 +7,33 @@
 
 /* ─── Design Tokens ─── */
 :root {
-  --bg-base:      #0d0906;
-  --bg-surface:   #1a1209;
-  --bg-elevated:  #211608;
-  --bg-card:      #2c1e0c;
+  --bg-base:      #0d0905;
+  --bg-surface:   #1e1409;
+  --bg-elevated:  #271a09;
+  --bg-card:      #361f0e;
 
   --text-primary:   #fdf2dc;
   --text-secondary: #dbbf8e;
   --text-muted:     #9a7e62;
 
-  --gold:            #c8a96c;
-  --gold-light:      #ecd49a;
-  --gold-dark:       #9a7838;
-  --gold-muted:      rgba(200,169,108,.18);
-  --gold-glow:       rgba(200,169,108,.32);
+  --gold:            #d4a83a;
+  --gold-light:      #f2cb58;
+  --gold-dark:       #9a7530;
+  --gold-muted:      rgba(212,168,58,.18);
+  --gold-glow:       rgba(212,168,58,.36);
 
   --terracotta:      #b84a1a;
   --terracotta-light:#d45e28;
 
-  --border:          rgba(200,169,108,.22);
-  --border-strong:   rgba(200,169,108,.52);
+  --border:          rgba(212,168,58,.22);
+  --border-strong:   rgba(212,168,58,.5);
 
   --shadow-sm:  0 2px 8px rgba(0,0,0,.5);
   --shadow-md:  0 4px 24px rgba(0,0,0,.55);
   --shadow-lg:  0 8px 48px rgba(0,0,0,.65);
-  --glow-gold:  0 0 44px rgba(200,169,108,.22);
+  --glow-gold:  0 0 44px rgba(212,168,58,.25);
 
-  --card-bg: linear-gradient(145deg,#2e1e0e 0%,#221508 55%,#2a1c0c 100%);
+  --card-bg: linear-gradient(145deg,#3e2210 0%,#2a1608 55%,#361e0d 100%);
 
   --font-heading: 'Playfair Display', Georgia, serif;
   --font-body:    'Inter', system-ui, sans-serif;
@@ -49,7 +49,7 @@
 
 /* ─── Reset ─── */
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior:smooth; -webkit-font-smoothing:antialiased; }
+html { scroll-behavior:smooth; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
 body {
   background: var(--bg-base);
   color: var(--text-primary);
@@ -57,7 +57,6 @@ body {
   font-size: 16px;
   line-height: 1.65;
   overflow-x: hidden;
-  min-width: 360px;
 }
 body.menu-open { overflow: hidden; }
 img  { max-width:100%; display:block; }
@@ -819,9 +818,11 @@ p  { color: var(--text-secondary); line-height: 1.8; }
 }
 .book-page { min-width:100%; padding:2px; }
 
+.book-viewport { touch-action: pan-y; }
+
 .book-frame {
   position:relative;
-  background:linear-gradient(160deg,#1e1508 0%,#261a0a 50%,#1a1206 100%);
+  background:linear-gradient(160deg,#28180a 0%,#321c0c 50%,#241508 100%);
   border:1px solid var(--border-strong);
   border-radius:var(--radius-lg);
   padding:52px 56px 44px;
@@ -939,13 +940,13 @@ p  { color: var(--text-secondary); line-height: 1.8; }
   .menu-toggle { display:flex; }
   .nav-overlay { display:block; }
 
-  /* ── Grids — use 2 columns on phone to fill width ── */
-  .grid-2  { grid-template-columns:1fr 1fr; gap:16px; }
-  .grid-3  { grid-template-columns:1fr 1fr; gap:16px; }
-  .grid-4  { grid-template-columns:1fr 1fr; gap:14px; }
+  /* ── Grids — full width on phone ── */
+  .grid-2  { grid-template-columns:1fr; gap:16px; }
+  .grid-3  { grid-template-columns:1fr; gap:16px; }
+  .grid-4  { grid-template-columns:1fr; gap:14px; }
   .form-row { grid-template-columns:1fr; }
 
-  /* ── Footer: 2×2 grid on mobile ── */
+  /* ── Footer: 2-col on mobile ── */
   .footer-grid  { grid-template-columns:1fr 1fr; gap:24px 20px; }
   .footer-bottom { flex-direction:column; gap:10px; text-align:center; }
 
@@ -958,34 +959,31 @@ p  { color: var(--text-secondary); line-height: 1.8; }
   .stat-sep  { display:none; }
 
   /* ── Dish cards — shorter image, compact body ── */
-  .dish-img        { height:120px; font-size:36px; }
-  .dish-body       { padding:12px 14px; }
-  .dish-header     { margin-bottom:6px; }
-  .dish-name       { font-size:14px; }
-  .dish-arabic     { font-size:11px; }
-  .dish-price      { font-size:16px; }
-  .dish-desc       { font-size:12px; line-height:1.5;
-                     display:-webkit-box; -webkit-line-clamp:2;
-                     -webkit-box-orient:vertical; overflow:hidden;
-                     margin-bottom:6px; }
+  .dish-img        { height:160px; font-size:44px; }
+  .dish-body       { padding:16px 18px; }
+  .dish-header     { margin-bottom:8px; }
+  .dish-name       { font-size:18px; }
+  .dish-arabic     { font-size:12px; }
+  .dish-price      { font-size:19px; }
+  .dish-desc       { font-size:13px; line-height:1.55; margin-bottom:8px; }
   .dish-origin     { font-size:11px; }
-  .spice-row       { margin-top:6px; }
+  .spice-row       { margin-top:8px; }
 
-  /* ── Feature cards — icon left, text right (horizontal) ── */
-  .feature-card    { display:flex; align-items:flex-start; gap:12px; padding:16px 14px; }
-  .feature-icon    { width:36px; height:36px; font-size:16px; margin-bottom:0; flex-shrink:0; }
-  .feature-title   { font-size:15px; margin-bottom:6px; }
-  .feature-desc    { font-size:12px; line-height:1.5; }
+  /* ── Feature cards — vertical full-width ── */
+  .feature-card    { padding:24px 20px; }
+  .feature-icon    { width:44px; height:44px; font-size:20px; margin-bottom:14px; }
+  .feature-title   { font-size:18px; margin-bottom:8px; }
+  .feature-desc    { font-size:14px; line-height:1.7; }
 
   /* ── Category cards ── */
-  .cat-card        { padding:16px 14px; gap:8px; }
-  .cat-emoji       { font-size:28px; }
-  .cat-name        { font-size:16px; }
-  .cat-count       { font-size:11px; }
-  .cat-link        { font-size:12px; }
+  .cat-card        { padding:20px 18px; gap:10px; }
+  .cat-emoji       { font-size:34px; }
+  .cat-name        { font-size:18px; }
+  .cat-count       { font-size:12px; }
+  .cat-link        { font-size:13px; }
 
   /* ── Book ── */
-  .book-frame   { padding:32px 24px 28px; }
+  .book-frame   { padding:28px 22px 24px; }
   .book-arrow   { width:40px; height:40px; font-size:22px; }
   .book-outer   { gap:8px; }
   .book-dish-name  { font-size:15px; }
@@ -995,23 +993,24 @@ p  { color: var(--text-secondary); line-height: 1.8; }
   :root { --section-pad:40px; }
   .container { padding:0 16px; }
 
-  /* Keep 2 columns on small phones — use width */
-  .grid-2 { grid-template-columns:1fr 1fr; gap:12px; }
-  .grid-3 { grid-template-columns:1fr 1fr; gap:12px; }
-  .grid-4 { grid-template-columns:1fr 1fr; gap:10px; }
+  /* 1 column on small phones */
+  .grid-2 { grid-template-columns:1fr; gap:12px; }
+  .grid-3 { grid-template-columns:1fr; gap:12px; }
+  .grid-4 { grid-template-columns:1fr; gap:10px; }
 
-  /* Even more compact cards */
-  .dish-img        { height:100px; font-size:30px; }
-  .dish-body       { padding:10px 12px; }
-  .dish-name       { font-size:13px; }
-  .dish-price      { font-size:14px; }
+  /* Compact cards */
+  .dish-img        { height:140px; font-size:38px; }
+  .dish-body       { padding:14px 16px; }
+  .dish-name       { font-size:17px; }
+  .dish-price      { font-size:18px; }
   .dish-origin     { display:none; }
-  .feature-card    { padding:14px 12px; gap:10px; }
-  .feature-icon    { width:30px; height:30px; font-size:14px; }
-  .feature-title   { font-size:13px; }
-  .cat-card        { padding:14px 12px; gap:6px; }
-  .cat-emoji       { font-size:24px; }
-  .cat-name        { font-size:14px; }
+  .feature-card    { padding:20px 16px; }
+  .feature-icon    { width:38px; height:38px; font-size:18px; margin-bottom:12px; }
+  .feature-title   { font-size:16px; }
+  .feature-desc    { font-size:13px; }
+  .cat-card        { padding:18px 16px; gap:8px; }
+  .cat-emoji       { font-size:30px; }
+  .cat-name        { font-size:16px; }
 
   /* Footer: 2 columns still, just smaller fonts */
   .footer-grid     { grid-template-columns:1fr 1fr; gap:20px 14px; }
