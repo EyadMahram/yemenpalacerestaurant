@@ -745,7 +745,7 @@ p  { color: var(--text-secondary); line-height: 1.8; }
 }
 .social-btn:hover { border-color:var(--gold); color:var(--gold); }
 .footer-heading { font-family:var(--font-heading); font-size:17px; color:var(--text-primary); margin-bottom:18px; font-weight:600; }
-.footer-nav ul  { display:flex; flex-direction:column; gap:10px; }
+.footer-nav ul  { display:grid; grid-template-columns:1fr 1fr; gap:8px 16px; }
 .footer-nav a   { font-size:14px; color:var(--text-muted); transition:color .2s; }
 .footer-nav a:hover { color:var(--gold); }
 .footer-hours .hours-table td { padding:9px 0; font-size:13px; }
