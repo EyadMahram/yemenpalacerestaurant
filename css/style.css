@@ -147,7 +147,6 @@ p  { color: var(--text-secondary); line-height: 1.8; }
 .navbar.scrolled {
   padding: 13px 0;
   background: rgba(13,9,6,.96);
-  backdrop-filter: blur(20px);
   border-bottom-color: var(--border);
 }
 .navbar .container { display:flex; align-items:center; justify-content:space-between; }
