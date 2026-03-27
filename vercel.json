@@ -1,3 +1,12 @@
 {
-  "outputDirectory": "."
+  "outputDirectory": ".",
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "yemenpalacerestaurant.nl" }],
+      "destination": "https://www.yemenpalacerestaurant.nl/:path*",
+      "permanent": true
+    }
+  ]
 }

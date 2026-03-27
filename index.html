@@ -1,177 +1,413 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Domain For Sale</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #0a0a0a;
-      font-family: 'Georgia', serif;
-      color: #f5f0e8;
-    }
-
-    .container {
-      text-align: center;
-      padding: 60px 40px;
-      max-width: 600px;
-    }
-
-    .badge {
-      display: inline-block;
-      background: #c8a96e;
-      color: #0a0a0a;
-      font-size: 12px;
-      font-weight: bold;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      padding: 6px 18px;
-      border-radius: 2px;
-      margin-bottom: 40px;
-    }
-
-    h1 {
-      font-size: clamp(28px, 5vw, 48px);
-      font-weight: normal;
-      letter-spacing: 1px;
-      margin-bottom: 16px;
-      color: #f5f0e8;
-    }
-
-    .divider {
-      width: 60px;
-      height: 2px;
-      background: #c8a96e;
-      margin: 30px auto;
-    }
-
-    p {
-      font-size: 18px;
-      color: #a89880;
-      line-height: 1.7;
-      margin-bottom: 10px;
-    }
-
-    a {
-      color: #c8a96e;
-      text-decoration: none;
-      font-size: 20px;
-      letter-spacing: 0.5px;
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.2s;
-    }
-
-    a:hover {
-      border-bottom-color: #c8a96e;
-    }
-
-    .cta {
-      margin-top: 40px;
-      display: inline-block;
-      background: transparent;
-      border: 1px solid #c8a96e;
-      color: #c8a96e;
-      padding: 14px 36px;
-      font-size: 14px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      text-decoration: none;
-      border-radius: 2px;
-      transition: background 0.2s, color 0.2s;
-    }
-
-    .cta:hover {
-      background: #c8a96e;
-      color: #0a0a0a;
-      border-bottom-color: transparent;
-    }
-
-    .divider-section {
-      width: 100%;
-      height: 1px;
-      background: #222;
-      margin: 60px 0;
-    }
-
-    .build-section {
-      text-align: center;
-    }
-
-    .build-section .badge {
-      background: #1a3a2a;
-      color: #5cba8a;
-      border: 1px solid #2a5a3a;
-    }
-
-    .build-section h2 {
-      font-size: clamp(22px, 4vw, 36px);
-      font-weight: normal;
-      color: #f5f0e8;
-      margin-bottom: 16px;
-      letter-spacing: 1px;
-    }
-
-    .build-section p {
-      font-size: 16px;
-      color: #a89880;
-      max-width: 460px;
-      margin: 0 auto 10px;
-    }
-
-    .build-cta {
-      margin-top: 36px;
-      display: inline-block;
-      background: #5cba8a;
-      border: 1px solid #5cba8a;
-      color: #0a0a0a;
-      padding: 14px 36px;
-      font-size: 14px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      text-decoration: none;
-      border-radius: 2px;
-      font-family: 'Georgia', serif;
-      transition: background 0.2s, color 0.2s;
-    }
-
-    .build-cta:hover {
-      background: transparent;
-      color: #5cba8a;
-      border-bottom-color: transparent;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yemen Palace Restaurant — Authentic Yemeni Cuisine in Den Haag</title>
+  <meta name="description" content="Experience the rich flavours of Yemen in the heart of Den Haag. Slow-cooked mandi, saltah, kabsa and freshly baked flatbreads. Wagenstraat 126A, Den Haag." />
+  <link rel="canonical" href="https://www.yemenpalacerestaurant.nl/" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <div class="container">
-    <div class="badge">Domain For Sale</div>
-    <h1>This domain is for sale</h1>
-    <div class="divider"></div>
-    <p>Interested in acquiring this domain?</p>
-    <p>Send an email to:</p>
-    <br>
-    <a href="mailto:contact@consuai.com">contact@consuai.com</a>
-    <br>
-    <a href="mailto:contact@consuai.com" class="cta">Make an offer</a>
-    <div class="divider-section"></div>
 
-    <div class="build-section">
-      <div class="badge">We Can Build It</div>
-      <h2>Want a full website for this domain?</h2>
-      <div class="divider"></div>
-      <p>We are ready to design and develop a complete, professional website for the new owner of this domain.</p>
-      <p>Restaurant websites, menus, reservations, and more — all included.</p>
-      <a href="mailto:contact@consuai.com" class="build-cta">Get a free quote</a>
+<canvas id="rice-canvas"></canvas>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <div class="brand-icon">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+          <path d="M20 4L24 12L32 8.5L28.5 16.5L37 20L28.5 23.5L32 31.5L24 28L20 36L16 28L8 31.5L11.5 23.5L3 20L11.5 16.5L8 8.5L16 12Z" stroke="#c8a16a" stroke-width="1.4" fill="none"/>
+          <circle cx="20" cy="20" r="5" fill="#c8a16a" opacity="0.22"/>
+          <circle cx="20" cy="20" r="2.2" fill="#c8a16a"/>
+        </svg>
+      </div>
+      <div class="brand-text">
+        <span class="brand-name">Yemen Palace</span>
+        <span class="brand-sub">Restaurant</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html"       class="nav-link">Home</a></li>
+      <li><a href="menu.html"        class="nav-link">Menu</a></li>
+      <li><a href="about.html"       class="nav-link">About</a></li>
+      <li><a href="gallery.html"     class="nav-link">Gallery</a></li>
+      <li><a href="contact.html"     class="nav-link">Contact</a></li>
+      <li><a href="reservation.html" class="nav-link nav-cta">Reserve</a></li>
+    </ul>
+    <button class="menu-toggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-overlay"></div>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-dot-pattern"></div>
+  <div class="container">
+    <div class="hero-content">
+      <span class="hero-eyebrow">Est. 2010 &nbsp;&middot;&nbsp; Wagenstraat 126A, Den Haag</span>
+      <h1 class="hero-title">
+        Yemen Palace
+        <em>Restaurant</em>
+      </h1>
+      <p class="hero-tagline">"Where Ancient Flavours Meet Warm Hospitality"</p>
+      <p class="hero-desc">
+        Journey through the rich culinary heritage of Yemen — slow-cooked mandi, hearty saltah,
+        and fragrant kabsa crafted with generations of tradition and served with the warmth
+        of true Yemeni <em>diyafa</em>.
+      </p>
+      <div class="hero-actions">
+        <a href="menu.html"        class="btn btn-primary btn-lg">Explore Our Menu</a>
+        <a href="reservation.html" class="btn btn-ghost  btn-lg">Reserve a Table</a>
+      </div>
     </div>
   </div>
+  <div class="hero-scroll">
+    <span>Discover</span>
+    <div class="hero-scroll-line"></div>
+  </div>
+</section>
+
+<!-- Stats Bar -->
+<div class="stats-bar">
+  <div class="container">
+    <div class="stat-item reveal"><div class="stat-number">15+</div><div class="stat-label">Years of Tradition</div></div>
+    <div class="stat-sep"></div>
+    <div class="stat-item reveal d1"><div class="stat-number">40+</div><div class="stat-label">Authentic Dishes</div></div>
+    <div class="stat-sep"></div>
+    <div class="stat-item reveal d2"><div class="stat-number">4.8&#9733;</div><div class="stat-label">Guest Rating</div></div>
+    <div class="stat-sep"></div>
+    <div class="stat-item reveal d3"><div class="stat-number">100%</div><div class="stat-label">Halal Certified</div></div>
+  </div>
+</div>
+
+<!-- Signature Dishes -->
+<section class="section" id="signature">
+  <div class="container">
+    <div class="section-header">
+      <div class="eyebrow reveal">Signature Dishes</div>
+      <h2 class="section-title reveal">The Heart of Our Kitchen</h2>
+      <div class="ornament reveal"><div class="ornament-gem"></div></div>
+      <p class="section-desc reveal">Three dishes that define who we are — slow-cooked with patience, seasoned with heritage, and served with pride.</p>
+    </div>
+    <div class="grid-3">
+
+      <div class="dish-card reveal">
+        <div class="dish-img" style="background:linear-gradient(135deg,#3a1f06 0%,#7a4015 50%,#4a2a0a 100%)">
+          &#129366;
+          <span class="dish-badge">Signature</span>
+        </div>
+        <div class="dish-body">
+          <div class="dish-header">
+            <div><div class="dish-name">Lamb Mandi <span class="dish-arabic">&#1575;&#1604;&#1605;&#1606;&#1583;&#1610;</span></div></div>
+            <div class="dish-price">&#8364;18</div>
+          </div>
+          <p class="dish-desc">The crown jewel of Yemeni cuisine. Whole lamb slow-roasted in an underground tandoor over fragrant basmati rice, perfumed with saffron, cardamom, dried lime, and our secret hawaij spice blend.</p>
+          <p class="dish-origin">&#127757; Origin: Hadhramaut, Yemen</p>
+          <div class="spice-row">
+            <span class="spice-label">Spice</span>
+            <span class="spice-dot lit"></span><span class="spice-dot lit"></span><span class="spice-dot"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="dish-card reveal d2">
+        <div class="dish-img" style="background:linear-gradient(135deg,#3d0a00 0%,#8a2c0c 50%,#4a1208 100%)">
+          &#127858;
+          <span class="dish-badge">National Dish</span>
+        </div>
+        <div class="dish-body">
+          <div class="dish-header">
+            <div><div class="dish-name">Saltah <span class="dish-arabic">&#1575;&#1604;&#1587;&#1604;&#1578;&#1577;</span></div></div>
+            <div class="dish-price">&#8364;15</div>
+          </div>
+          <p class="dish-desc">Yemen's national dish. A rich lamb stew simmered with tomatoes and spices, crowned with a cloud of whipped fenugreek foam (hulba). Bubbling hot and served in a traditional clay pot with fresh lahoh bread.</p>
+          <p class="dish-origin">&#127757; Origin: Sana'a, Yemen</p>
+          <div class="spice-row">
+            <span class="spice-label">Spice</span>
+            <span class="spice-dot lit"></span><span class="spice-dot lit"></span><span class="spice-dot lit"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="dish-card reveal d3">
+        <div class="dish-img" style="background:linear-gradient(135deg,#3d1a00 0%,#8b4a10 50%,#4a2208 100%)">
+          &#127835;
+          <span class="dish-badge">Favourite</span>
+        </div>
+        <div class="dish-body">
+          <div class="dish-header">
+            <div><div class="dish-name">Kabsa <span class="dish-arabic">&#1575;&#1604;&#1603;&#1576;&#1587;&#1577;</span></div></div>
+            <div class="dish-price">&#8364;17</div>
+          </div>
+          <p class="dish-desc">Tender chicken or lamb on a bed of long-grain rice cooked with tomatoes, dried apricots, raisins, and our warm spice medley. Finished with toasted almonds and fried onions.</p>
+          <p class="dish-origin">&#127757; Origin: Throughout Yemen &amp; Arabia</p>
+          <div class="spice-row">
+            <span class="spice-label">Spice</span>
+            <span class="spice-dot lit"></span><span class="spice-dot lit"></span><span class="spice-dot"></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div style="text-align:center;margin-top:44px;" class="reveal">
+      <a href="menu.html" class="btn btn-ghost">View Full Menu &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- Our Story Teaser -->
+<section class="coffee-section">
+  <div class="container">
+    <div class="split-grid">
+      <div class="split-text reveal-left">
+        <div class="eyebrow">Our Story</div>
+        <h2 style="margin-bottom:20px;">From the <em style="color:var(--gold)">Mountains of Sana'a</em> to Den Haag</h2>
+        <p style="margin-bottom:20px;">Yemen Palace was born from a deep love for the food that brought our family together around the <em>sufra</em> &mdash; the communal dining cloth. Our founder, originally from Sana'a, carried grandmother's recipes across the world and opened this restaurant with one promise: that every guest would feel at home.</p>
+        <p style="margin-bottom:32px;">In Yemeni culture, hospitality (<em>diyafa</em>) is not simply good manners &mdash; it is a sacred duty. We prepare every dish as if cooking for family: with patience, love, and the finest spices sourced directly from Yemeni markets.</p>
+        <a href="about.html" class="btn btn-primary">Read Our Full Story</a>
+      </div>
+      <div class="split-visual reveal-right">
+        <div class="visual-card" style="background:linear-gradient(145deg,#1a0d04,#3d1f08 40%,#251208 100%);">
+          &#128336;
+          <div style="position:absolute;bottom:28px;left:28px;right:28px;z-index:2;">
+            <div class="quote-block" style="margin:0;font-size:15px;padding:14px 18px;">
+              "A guest is a gift from God." &mdash; Yemeni Proverb
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- The Experience -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="eyebrow reveal">The Experience</div>
+      <h2 class="section-title reveal">More Than a Meal</h2>
+      <div class="ornament reveal"><div class="ornament-gem"></div></div>
+      <p class="section-desc reveal">Dining at Yemen Palace is a journey &mdash; into culture, warmth, and flavours that tell a story.</p>
+    </div>
+    <div class="grid-3">
+      <div class="feature-card reveal">
+        <div class="feature-icon">&#129561;</div>
+        <div class="feature-title">Authentic Recipes</div>
+        <p class="feature-desc">Every recipe has been passed down through generations. We use traditional cooking methods including underground tandoor roasting and slow simmering in clay pots &mdash; the same way Yemen's grandmothers cook today.</p>
+      </div>
+      <div class="feature-card reveal d2">
+        <div class="feature-icon">&#129309;</div>
+        <div class="feature-title">Communal Dining</div>
+        <p class="feature-desc">In Yemen, food is always shared. Our large shared platters and traditional <em>sufra</em> style encourage you to gather, bond, and feast together. We welcome families, groups, and celebrations of every kind.</p>
+      </div>
+      <div class="feature-card reveal d3">
+        <div class="feature-icon">&#10024;</div>
+        <div class="feature-title">Warm Hospitality</div>
+        <p class="feature-desc"><em>Diyafa</em> &mdash; Yemeni hospitality &mdash; is at the heart of everything we do. Every guest is greeted with fresh dates, Arabic coffee, and the genuine warmth that makes Yemen legendary for its welcome.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Menu Categories -->
+<section class="section" style="background:var(--bg-surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div class="container">
+    <div class="section-header">
+      <div class="eyebrow reveal">Our Menu</div>
+      <h2 class="section-title reveal">Explore Every Corner of Yemeni Cuisine</h2>
+      <div class="ornament reveal"><div class="ornament-gem"></div></div>
+    </div>
+    <div class="grid-4">
+      <a href="menu.html" class="cat-card reveal">
+        <div class="cat-emoji">&#127834;</div>
+        <div class="cat-name">Rice Dishes</div>
+        <div class="cat-count">5 dishes &mdash; Mandi, Kabsa, Zurbian &amp; more</div>
+        <div class="cat-link">View all &rarr;</div>
+      </a>
+      <a href="menu.html" class="cat-card reveal d1">
+        <div class="cat-emoji">&#127858;</div>
+        <div class="cat-name">Stews &amp; Soups</div>
+        <div class="cat-count">5 dishes &mdash; Saltah, Fahsa, Maraq &amp; more</div>
+        <div class="cat-link">View all &rarr;</div>
+      </a>
+      <a href="menu.html" class="cat-card reveal d2">
+        <div class="cat-emoji">&#129347;</div>
+        <div class="cat-name">Breads &amp; Sides</div>
+        <div class="cat-count">5 items &mdash; Lahoh, Malawah, Mutabbaq &amp; more</div>
+        <div class="cat-link">View all &rarr;</div>
+      </a>
+      <a href="menu.html" class="cat-card reveal d3">
+        <div class="cat-emoji">&#9749;</div>
+        <div class="cat-name">Drinks</div>
+        <div class="cat-count">6 drinks &mdash; Qishr, Shahi, Fresh Juices &amp; more</div>
+        <div class="cat-link">View all &rarr;</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Coffee & Tea -->
+<section class="coffee-section">
+  <div class="container">
+    <div class="coffee-grid">
+      <div class="coffee-visual reveal-left">
+        <div class="coffee-emoji">&#9749;</div>
+        <div class="coffee-label">Qishr &mdash; Yemen's Sacred Coffee</div>
+      </div>
+      <div class="reveal-right">
+        <div class="eyebrow">Coffee &amp; Tea Culture</div>
+        <h2 style="margin-bottom:20px;">The Ritual of <em style="color:var(--gold)">Qishr</em></h2>
+        <p style="margin-bottom:18px;">Yemeni coffee is unlike any other in the world. <em>Qishr</em> is brewed not from the bean itself, but from the golden coffee husk &mdash; spiced with fresh ginger and green cardamom, giving it a uniquely smooth and warming character.</p>
+        <p style="margin-bottom:18px;">In Yemen, a cup of Qishr is never just a drink. It is an invitation &mdash; to slow down, to converse, to welcome. We serve it the traditional way, poured from a <em>dallah</em> pot into small ceramic cups with no handles.</p>
+        <p style="margin-bottom:32px;">Pair it with our warm <em>bint al-sahn</em> &mdash; layered honeyed bread &mdash; for a truly authentic Yemeni welcome experience.</p>
+        <a href="menu.html" class="btn btn-primary">Explore Our Drinks</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Reservation CTA -->
+<section class="cta-banner">
+  <div class="container">
+    <div class="eyebrow reveal">Reservations</div>
+    <h2 class="reveal" style="margin-bottom:14px;">Join Us for an Authentic Yemeni Feast</h2>
+    <p class="reveal d1">Book your table and let us take care of the rest. We welcome walk-ins, but reservations guarantee your preferred time and seating.</p>
+    <div style="margin-top:36px;" class="reveal d2">
+      <a href="reservation.html" class="btn btn-primary btn-lg">Reserve a Table</a>
+    </div>
+    <p class="reveal d3" style="margin-top:20px;font-size:14px;color:var(--text-muted);">Large groups &amp; private dining? Call us at <a href="tel:+31701234567" style="color:var(--gold);">+31 70 123 4567</a></p>
+  </div>
+</section>
+
+<!-- Location -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="eyebrow reveal">Find Us</div>
+      <h2 class="section-title reveal">In the Heart of Den Haag</h2>
+      <div class="ornament reveal"><div class="ornament-gem"></div></div>
+    </div>
+    <div class="location-grid">
+      <div class="map-box reveal-left">
+        <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=4.296%2C52.066%2C4.320%2C52.076&amp;layer=mapnik&amp;marker=52.071%2C4.308" title="Yemen Palace Restaurant" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="reveal-right">
+        <div class="info-block">
+          <div class="info-item">
+            <div class="info-icon">&#128205;</div>
+            <div>
+              <div class="info-label">Address</div>
+              <div class="info-value">Wagenstraat 126A<br>2512 BA Den Haag<br>The Netherlands</div>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">&#128222;</div>
+            <div>
+              <div class="info-label">Phone</div>
+              <div class="info-value"><a href="tel:+31701234567">+31 70 123 4567</a></div>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">&#9993;</div>
+            <div>
+              <div class="info-label">Email</div>
+              <div class="info-value"><a href="mailto:info@yemenpalacerestaurant.nl">info@yemenpalacerestaurant.nl</a></div>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">&#128336;</div>
+            <div>
+              <div class="info-label">Opening Hours</div>
+              <div class="info-value">
+                <table class="hours-table">
+                  <tr data-day="mon"><td>Mon &ndash; Thu</td><td>12:00 &ndash; 22:00</td></tr>
+                  <tr data-day="fri"><td>Fri &ndash; Sat</td><td>12:00 &ndash; 23:00</td></tr>
+                  <tr data-day="sun"><td>Sunday</td><td>13:00 &ndash; 22:00</td></tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-pattern"></div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <div class="brand-icon">
+            <svg width="36" height="36" viewBox="0 0 40 40" fill="none">
+              <path d="M20 4L24 12L32 8.5L28.5 16.5L37 20L28.5 23.5L32 31.5L24 28L20 36L16 28L8 31.5L11.5 23.5L3 20L11.5 16.5L8 8.5L16 12Z" stroke="#c8a16a" stroke-width="1.4" fill="none"/>
+              <circle cx="20" cy="20" r="5" fill="#c8a16a" opacity="0.22"/>
+              <circle cx="20" cy="20" r="2.2" fill="#c8a16a"/>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">Yemen Palace</span>
+            <span class="brand-sub">Restaurant</span>
+          </div>
+        </a>
+        <p class="footer-tagline">Bringing the authentic flavours and warm hospitality of Yemen to the heart of Den Haag since 2010.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn" aria-label="Instagram">&#128247;</a>
+          <a href="#" class="social-btn" aria-label="Facebook">&#128101;</a>
+          <a href="#" class="social-btn" aria-label="TripAdvisor">&#11088;</a>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <h4 class="footer-heading">Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Our Menu</a></li>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="reservation.html">Reservations</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-hours">
+        <h4 class="footer-heading">Opening Hours</h4>
+        <table class="hours-table">
+          <tr data-day="mon"><td>Mon &ndash; Thu</td><td>12:00 &ndash; 22:00</td></tr>
+          <tr data-day="fri"><td>Fri &ndash; Sat</td><td>12:00 &ndash; 23:00</td></tr>
+          <tr data-day="sun"><td>Sunday</td><td>13:00 &ndash; 22:00</td></tr>
+        </table>
+        <p style="margin-top:12px;font-size:13px;color:var(--text-muted);">Kitchen closes 30 min before closing.</p>
+      </div>
+      <div class="footer-contact">
+        <h4 class="footer-heading">Find Us</h4>
+        <address>
+          <p>Wagenstraat 126A</p>
+          <p>2512 BA Den Haag</p>
+          <p>The Netherlands</p>
+        </address>
+        <div class="footer-contact-links">
+          <a href="tel:+31701234567">+31 70 123 4567</a>
+          <a href="mailto:info@yemenpalacerestaurant.nl">info@yemenpalacerestaurant.nl</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Yemen Palace Restaurant. All rights reserved. 100% Halal.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/rice.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

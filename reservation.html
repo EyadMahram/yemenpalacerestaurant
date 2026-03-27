@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reserve a Table — Yemen Palace Restaurant | Den Haag</title>
+  <meta name="description" content="Reserve your table at Yemen Palace Restaurant in Den Haag. Authentic Yemeni cuisine — mandi, saltah, kabsa and more. Book online or call +31 70 123 4567." />
+  <link rel="canonical" href="https://www.yemenpalacerestaurant.nl/reservation" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<canvas id="rice-canvas"></canvas>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <div class="brand-icon"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M20 4L24 12L32 8.5L28.5 16.5L37 20L28.5 23.5L32 31.5L24 28L20 36L16 28L8 31.5L11.5 23.5L3 20L11.5 16.5L8 8.5L16 12Z" stroke="#c8a16a" stroke-width="1.4" fill="none"/><circle cx="20" cy="20" r="5" fill="#c8a16a" opacity="0.22"/><circle cx="20" cy="20" r="2.2" fill="#c8a16a"/></svg></div>
+      <div class="brand-text"><span class="brand-name">Yemen Palace</span><span class="brand-sub">Restaurant</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html"       class="nav-link">Home</a></li>
+      <li><a href="menu.html"        class="nav-link">Menu</a></li>
+      <li><a href="about.html"       class="nav-link">About</a></li>
+      <li><a href="gallery.html"     class="nav-link">Gallery</a></li>
+      <li><a href="contact.html"     class="nav-link">Contact</a></li>
+      <li><a href="reservation.html" class="nav-link nav-cta">Reserve</a></li>
+    </ul>
+    <button class="menu-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-overlay"></div>
+
+<div class="page-hero">
+  <div class="page-hero-dots"></div>
+  <div class="container">
+    <div class="page-hero-content">
+      <div class="eyebrow reveal">Book Your Table</div>
+      <h1 class="page-title reveal">Reserve a <em style="color:var(--gold)">Table</em></h1>
+      <div class="ornament reveal"><div class="ornament-gem"></div></div>
+      <p class="page-subtitle reveal">We look forward to welcoming you. Walk-ins are always welcome, but a reservation guarantees your preferred time.</p>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="res-layout">
+
+      <!-- Booking Form -->
+      <div class="reveal">
+        <div class="form-card">
+          <h3 style="font-family:var(--font-heading);font-size:26px;margin-bottom:8px;">Book Your Visit</h3>
+          <p style="font-size:14px;color:var(--text-muted);margin-bottom:32px;">We will confirm your reservation by phone or email within 2 hours.</p>
+
+          <form id="reservation-form">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="res-name">Full Name *</label>
+                <input type="text" id="res-name" class="form-input" placeholder="Your full name" required maxlength="100" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="res-phone">Phone Number *</label>
+                <input type="tel" id="res-phone" class="form-input" placeholder="+31 6 12 34 56 78" required maxlength="20" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="res-email">Email Address *</label>
+              <input type="email" id="res-email" class="form-input" placeholder="you@example.com" required maxlength="254" />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="res-date">Preferred Date *</label>
+                <input type="date" id="res-date" class="form-input" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="res-time">Preferred Time *</label>
+                <select id="res-time" class="form-select" required>
+                  <option value="">Select a time</option>
+                  <option>12:00</option><option>12:30</option>
+                  <option>13:00</option><option>13:30</option>
+                  <option>14:00</option><option>14:30</option>
+                  <option>15:00</option><option>15:30</option>
+                  <option>16:00</option><option>16:30</option>
+                  <option>17:00</option><option>17:30</option>
+                  <option>18:00</option><option>18:30</option>
+                  <option>19:00</option><option>19:30</option>
+                  <option>20:00</option><option>20:30</option>
+                  <option>21:00</option><option>21:30</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="res-guests">Number of Guests *</label>
+              <select id="res-guests" class="form-select" required>
+                <option value="">Select number of guests</option>
+                <option>1 guest</option>
+                <option>2 guests</option>
+                <option>3 guests</option>
+                <option>4 guests</option>
+                <option>5 guests</option>
+                <option>6 guests</option>
+                <option>7 guests</option>
+                <option>8 guests</option>
+                <option>9 guests</option>
+                <option>10 guests</option>
+                <option>10+ guests — Large group (we'll call you)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="res-occasion">Special Occasion</label>
+              <select id="res-occasion" class="form-select">
+                <option value="">None / Regular visit</option>
+                <option>Birthday</option>
+                <option>Anniversary</option>
+                <option>Family gathering</option>
+                <option>Business dinner</option>
+                <option>Other celebration</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="res-requests">Special Requests</label>
+              <textarea id="res-requests" class="form-textarea" placeholder="Dietary requirements, allergies, seating preferences, or anything we should know..." rows="4" maxlength="1000"></textarea>
+            </div>
+
+            <div style="background:var(--gold-muted);border:1px solid rgba(200,161,106,.3);border-radius:10px;padding:16px;margin-bottom:24px;">
+              <p style="font-size:13px;color:var(--text-secondary);margin:0;">
+                &#127381; For <strong style="color:var(--text-primary);">Haneeth (whole roasted lamb)</strong>, we require at least 24 hours advance notice. Please mention it in your special requests above.
+              </p>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:16px;">
+              Request Reservation
+            </button>
+            <p class="form-note" style="text-align:center;">We will confirm within 2 hours &middot; No credit card required</p>
+          </form>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="reveal d2">
+        <div class="res-sidebar">
+          <h3>Good to Know</h3>
+
+          <div class="res-tip">
+            <div class="res-tip-icon">&#128336;</div>
+            <div class="res-tip-text">
+              <strong style="color:var(--text-primary);display:block;margin-bottom:4px;">Opening Hours</strong>
+              Mon &ndash; Thu: 12:00 &ndash; 22:00<br>
+              Fri &ndash; Sat: 12:00 &ndash; 23:00<br>
+              Sun: 13:00 &ndash; 22:00
+            </div>
+          </div>
+
+          <div class="res-tip">
+            <div class="res-tip-icon">&#128205;</div>
+            <div class="res-tip-text">
+              <strong style="color:var(--text-primary);display:block;margin-bottom:4px;">Our Address</strong>
+              Wagenstraat 126A<br>2512 BA Den Haag
+            </div>
+          </div>
+
+          <div class="res-tip">
+            <div class="res-tip-icon">&#9749;</div>
+            <div class="res-tip-text">
+              <strong style="color:var(--text-primary);display:block;margin-bottom:4px;">Welcome Ritual</strong>
+              Every guest is welcomed with a cup of Qishr coffee and fresh dates — our way of honouring the Yemeni tradition of <em>diyafa</em>.
+            </div>
+          </div>
+
+          <div class="res-tip">
+            <div class="res-tip-icon">&#128101;</div>
+            <div class="res-tip-text">
+              <strong style="color:var(--text-primary);display:block;margin-bottom:4px;">Large Groups</strong>
+              For groups of 10+, we recommend calling us directly so we can ensure the best seating arrangement and prepare a communal feast.
+            </div>
+          </div>
+
+          <div class="res-tip">
+            <div class="res-tip-icon">&#127981;</div>
+            <div class="res-tip-text">
+              <strong style="color:var(--text-primary);display:block;margin-bottom:4px;">Fully Halal</strong>
+              All our dishes are 100% halal. We are proud to welcome guests of all backgrounds and dietary requirements.
+            </div>
+          </div>
+
+          <div style="margin-top:24px;padding-top:24px;border-top:1px solid var(--border);">
+            <p style="font-size:13px;color:var(--text-muted);margin-bottom:10px;">Prefer to call?</p>
+            <a href="tel:+31701234567" class="btn btn-ghost btn-sm" style="width:100%;justify-content:center;">
+              &#128222; +31 70 123 4567
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-pattern"></div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <div class="brand-icon"><svg width="36" height="36" viewBox="0 0 40 40" fill="none"><path d="M20 4L24 12L32 8.5L28.5 16.5L37 20L28.5 23.5L32 31.5L24 28L20 36L16 28L8 31.5L11.5 23.5L3 20L11.5 16.5L8 8.5L16 12Z" stroke="#c8a16a" stroke-width="1.4" fill="none"/><circle cx="20" cy="20" r="5" fill="#c8a16a" opacity="0.22"/><circle cx="20" cy="20" r="2.2" fill="#c8a16a"/></svg></div>
+          <div class="brand-text"><span class="brand-name">Yemen Palace</span><span class="brand-sub">Restaurant</span></div>
+        </a>
+        <p class="footer-tagline">Bringing the authentic flavours and warm hospitality of Yemen to Den Haag since 2010.</p>
+        <div class="footer-social"><a href="#" class="social-btn">&#128247;</a><a href="#" class="social-btn">&#128101;</a><a href="#" class="social-btn">&#11088;</a></div>
+      </div>
+      <div class="footer-nav">
+        <h4 class="footer-heading">Navigate</h4>
+        <ul><li><a href="index.html">Home</a></li><li><a href="menu.html">Our Menu</a></li><li><a href="about.html">Our Story</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="reservation.html">Reservations</a></li><li><a href="contact.html">Contact</a></li></ul>
+      </div>
+      <div class="footer-hours">
+        <h4 class="footer-heading">Opening Hours</h4>
+        <table class="hours-table"><tr data-day="mon"><td>Mon &ndash; Thu</td><td>12:00 &ndash; 22:00</td></tr><tr data-day="fri"><td>Fri &ndash; Sat</td><td>12:00 &ndash; 23:00</td></tr><tr data-day="sun"><td>Sunday</td><td>13:00 &ndash; 22:00</td></tr></table>
+      </div>
+      <div class="footer-contact">
+        <h4 class="footer-heading">Find Us</h4>
+        <address><p>Wagenstraat 126A</p><p>2512 BA Den Haag</p><p>The Netherlands</p></address>
+        <div class="footer-contact-links"><a href="tel:+31701234567">+31 70 123 4567</a><a href="mailto:info@yemenpalacerestaurant.nl">info@yemenpalacerestaurant.nl</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Yemen Palace Restaurant. All rights reserved. 100% Halal.</p>
+      <div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/rice.js"></script>
+<script src="js/main.js"></script>
+<script>
+  // Set min date to today
+  const dateInput = document.getElementById('res-date');
+  if (dateInput) {
+    const today = new Date();
+    const yyyy = today.getFullYear();
+    const mm   = String(today.getMonth() + 1).padStart(2, '0');
+    const dd   = String(today.getDate()).padStart(2, '0');
+    dateInput.min = `${yyyy}-${mm}-${dd}`;
+  }
+</script>
+</body>
+</html>
