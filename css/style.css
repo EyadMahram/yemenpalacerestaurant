@@ -7,18 +7,16 @@
 
 /* ─── Design Tokens ─── */
 :root {
-  /* Backgrounds: cool dark slate/charcoal — NOT brown */
-  --bg-base:      #07090e;
-  --bg-surface:   #0d1520;
-  --bg-elevated:  #131d2e;
-  /* Cards keep the warm brown — intentional contrast */
-  --bg-card:      #2a1507;
+  /* Backgrounds: very dark warm charcoal — consistent with card warmth */
+  --bg-base:      #0c0a08;
+  --bg-surface:   #141210;
+  --bg-elevated:  #1e1a16;
+  --bg-card:      #2c1608;
 
   --text-primary:   #f0e8d4;
-  --text-secondary: #9e9278;
-  --text-muted:     #586070;
+  --text-secondary: #a09278;
+  --text-muted:     #6e6560;
 
-  /* Gold: richer amber — pops on the cool dark backgrounds */
   --gold:            #C8901A;
   --gold-light:      #E0A830;
   --gold-dark:       #8A5C0C;
@@ -149,7 +147,7 @@ p  { color: var(--text-secondary); line-height: 1.8; }
 }
 .navbar.scrolled {
   padding: 13px 0;
-  background: rgba(7,9,14,.97);
+  background: rgba(12,10,8,.97);
   border-bottom-color: var(--border);
 }
 .navbar .container { display:flex; align-items:center; justify-content:space-between; }
@@ -636,7 +634,7 @@ p  { color: var(--text-secondary); line-height: 1.8; }
 .form-input,
 .form-select,
 .form-textarea {
-  width:100%; background:rgba(7,9,14,.65);
+  width:100%; background:rgba(12,10,8,.65);
   border:1px solid var(--border); border-radius:var(--radius-sm);
   padding:14px 18px; font-size:15px; font-family:var(--font-body);
   color:var(--text-primary); transition:border-color .22s, box-shadow .22s, background .22s;
@@ -650,7 +648,7 @@ p  { color: var(--text-secondary); line-height: 1.8; }
 .form-textarea:focus {
   outline:none; border-color:var(--gold);
   box-shadow:0 0 0 3px rgba(200,144,26,.12), 0 0 16px rgba(200,144,26,.08);
-  background:rgba(7,9,14,.85);
+  background:rgba(12,10,8,.85);
 }
 .form-input::placeholder,
 .form-textarea::placeholder { color:var(--text-muted); }
