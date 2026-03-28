@@ -5,6 +5,27 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap');
 
+/* ─── Demo Disclaimer Banner ─── */
+.demo-banner {
+  background: #1a1200;
+  border-bottom: 1px solid rgba(200,144,26,.35);
+  text-align: center;
+  padding: 8px 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  color: #a09278;
+  line-height: 1.5;
+  position: relative;
+  z-index: 10000;
+}
+.demo-banner a {
+  color: #C8901A;
+  text-decoration: none;
+}
+.demo-banner a:hover {
+  text-decoration: underline;
+}
+
 /* ─── Design Tokens ─── */
 :root {
   /* Backgrounds: very dark warm charcoal — consistent with card warmth */
